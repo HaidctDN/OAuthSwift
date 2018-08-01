@@ -167,6 +167,9 @@ open class OAuth1Swift: OAuthSwift {
                 if let oauthTokenSecret = parameters["oauth_token_secret"] {
                     this.client.credential.oauthTokenSecret = oauthTokenSecret.safeStringByRemovingPercentEncoding
                 }
+                if let userID = parameters["user_nsid"] {
+                    this.client.credential.userID = userID.safeStringByRemovingPercentEncoding
+                }  
                 success(this.client.credential, response, parameters)
             }, failure: failure
             ) {
