@@ -114,6 +114,7 @@ open class OAuthSwiftCredential: NSObject, NSSecureCoding, Codable {
     open var oauthToken = ""
     open var oauthRefreshToken = ""
     open var oauthTokenSecret = ""
+    open var userID = ""
     open var oauthTokenExpiresAt: Date?
     open internal(set) var oauthVerifier = ""
     open var version: Version = .oauth1
