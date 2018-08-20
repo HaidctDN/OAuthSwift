@@ -98,7 +98,7 @@ open class OAuthSwiftCredential: NSObject, NSSecureCoding, Codable {
             }
         }
 
-        func sign(key: Data, message: Data) -> Data? {
+        public func sign(key: Data, message: Data) -> Data? {
             if let delegate = SignatureMethod.delegates[self] {
                 return delegate.sign(hashMethod: self.hashMethod, key: key, message: message)
             }
