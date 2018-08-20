@@ -24,7 +24,7 @@ extension Dictionary {
         return joinedDictionary
     }
 
-    var urlEncodedQuery: String {
+    public var urlEncodedQuery: String {
         var parts = [String]()
 
         for (key, value) in self {
