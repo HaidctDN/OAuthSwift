@@ -16,12 +16,12 @@ extension String {
 
     /// Encodes url string making it ready to be passed as a query parameter. This encodes pretty much everything apart from
     /// alphanumerics and a few other characters compared to standard query encoding.
-    var urlEncoded: String {
+    public var urlEncoded: String {
         let customAllowedSet = CharacterSet(charactersIn: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._~")
         return self.addingPercentEncoding(withAllowedCharacters: customAllowedSet)!
     }
 
-    var urlQueryEncoded: String? {
+    public var urlQueryEncoded: String? {
         return self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
     }
 
