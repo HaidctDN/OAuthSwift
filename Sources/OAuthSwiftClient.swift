@@ -122,7 +122,7 @@ open class OAuthSwiftClient: NSObject {
     }
 
     func multiPartRequest(url: String, method: OAuthSwiftHTTPRequest.Method, parameters: OAuthSwift.Parameters, image: Data, success: OAuthSwiftHTTPRequest.SuccessHandler?, failure: OAuthSwiftHTTPRequest.FailureHandler?) -> OAuthSwiftRequestHandle? {
-        let multiparts = [ OAuthSwiftMultipartData(name: "media", data: image, fileName: "file", mimeType: "image/jpeg") ]
+        let multiparts = [ OAuthSwiftMultipartData(name: "photo", data: image, fileName: "file", mimeType: "image/jpeg") ]
 
         if let request = makeMultiPartRequest(url, method: method, parameters: parameters, multiparts: multiparts) {
             request.start(success: success, failure: failure)
